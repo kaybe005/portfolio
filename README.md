@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# ⚗️ Kalash's Lab — Interactive 2D Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [kalash-verse.vercel.app](portfolio-kaybe005s-projects.vercel.app)
 
-Currently, two official plugins are available:
+Welcome to Kalash's LABORATORY — a fully interactive, animated portfolio themed after a high-tech research lab inspired by Dexter's Laboratory. This 2D portfolio was built to showcase full-stack development skills in a fun, retro-sci-fi interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧪 Features
+- **Animated Bootup Sequence:** Interactive terminal-style intro with progress bar and loading logs
+- **Sci-Fi Interface:** Glowing neon UI with orbitron and share-tech fonts
+- **Project Showcase:** Clickable project cards with screenshots and tech stacks
+- **Contact Form:** Responsive communication section with custom TRANSMIT sound
+- **Theme Consistency:** Dexter's Lab-style aesthetics carried throughout all pages
+- **Mobile Responsive:** Fully adaptive layout for mobile, tablet, and desktop
 
-## Expanding the ESLint configuration
+## 🧬 Stack
+- **Frontend:** React, TypeScript, TailwindCSS
+- **Styling:** Custom UI design with lab-themed components and retro-futuristic styling
+- **Animation:** Tailwind transitions, hover effects, terminal logs
+- **Sound Effects:** Button click and transmit audio via `use-sound`
+- **Deployment:** Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🧠 Pages
+
+| Section   | Description |
+|-----------|-------------|
+| `Home`    | Bootup intro, welcome terminal, and quick access buttons |
+| `Projects`| Showcases 4 projects with screenshots, tech tags, and links |
+| `About Me`| Lab Director profile, skills, tools, and domains |
+| `Contact` | Form to send secure transmissions, styled like a control panel |
+
+---
+
+## 📁 Project Structure
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+src/
+├── components/
+│   ├── LabPanel.tsx
+│   ├── LabButton.tsx
+│   ├── Terminal.tsx
+│   ├── ProjectCard.tsx
+├── pages/
+│   ├── HomeSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── AboutSection.tsx
+│   ├── ContactSection.tsx
+│   └── DemoUnavailable.tsx
 ```
+---
+
+## 🚀 Upcoming Enhancements
+
+- 3D lab integration with React Three Fiber
+- Floating terminal projection in Blender-modeled lab
+- Shader effects and animated environmental feedback
+
+---
+
+## 🧑‍🔬 Built By
+
+**Kalash Bijukchhe**  
+Full-Stack Developer & Experimental UI Designer  
+[@kay_beee05](https://www.instagram.com/kay_beee05)
+
+---
+
+> All experiments logged and monitored. Unauthorized cloning of lab results may result in spontaneous code mutation.
