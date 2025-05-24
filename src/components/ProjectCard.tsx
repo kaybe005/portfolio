@@ -11,6 +11,7 @@ interface ProjectCardProps {
   demoUrl?: string;
   codeUrl?: string;
   className?: string;
+  onClick?: () => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -21,6 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   demoUrl,
   codeUrl,
   className,
+  onClick,
 }) => {
   return (
     <LabPanel className={cn("h-full", className)}>
@@ -40,12 +42,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         
         {imageUrl && (
-          <div className="mb-3 border-2 border-dexter-teal rounded overflow-hidden">
+          <div className="mb-3 relative rounded-lg overflow-hidden border border-dexter-teal shadow-[0_0_20px_rgba(68,207,203,0.15)]">
             <img 
               src={imageUrl} 
               alt={title} 
-              className="w-full h-48 object-cover object-center"
+              className="w-full h-48 object-cover object-center brightness-90 hover:brightness-100 transition duration-300"
             />
+            <div className="absolute inset-0 bg-black/25 mix-blend-multiply pointer-events-none" />
           </div>
         )}
         
@@ -53,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         
         <div className="flex gap-2 mt-auto">
           {demoUrl && (
-            <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+            <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1" onClick={onClick}>
               <LabButton variant="primary" size="sm" className="w-full">
                 VIEW DEMO
               </LabButton>

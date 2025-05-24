@@ -4,9 +4,9 @@ import LabPanel from '../components/LabPanel';
 
 const AboutSection: React.FC = () => {
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "TailwindCSS", "Next.js"] },
-    { category: "Backend", items: ["Node.js", "Express", "MongoDB", "PostgreSQL"] },
-    { category: "Tools", items: ["Git", "Docker", "Figma", "Blender"] },
+    { category: "Frontend", items: ["React", "TypeScript", "Three.js", "HTML", "CSS", "TailwindCSS", "Next.js"] },
+    { category: "Backend", items: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Python", "C#", "ASP.NET"] },
+    { category: "Tools", items: ["Git", "Docker", "Figma", "Blender" ] },
     { category: "Specialties", items: [ "Finance", "Sports", "Collaboration", "AI"] }
   ];
 
@@ -52,7 +52,7 @@ const AboutSection: React.FC = () => {
           Current areas of study include:
           - Intelligent financial dashboards
           - AI-assisted data workflows
-          - Shader-based terrain rendering
+          - Shader-based 3D rendering
           - UI systems that spark curiosity
 
           WARNING: Unauthorized tampering with lab components may result in irreversible innovation.

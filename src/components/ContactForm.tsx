@@ -9,7 +9,11 @@ interface FormState {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  onSubmit?: () => void;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const [formState, setFormState] = useState<FormState>({
     name: '',
     email: '',
@@ -26,7 +30,8 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+    onSubmit?.();
+
     // Simulate form submission
     setStatus({ success: true, message: 'Message sent successfully!' });
     
@@ -88,8 +93,8 @@ const ContactForm: React.FC = () => {
         />
       </div>
       
-      <div className="flex justify-center">
-        <LabButton type="submit" variant="primary" size="lg">
+      <div className="flex justify-center px-4" onSubmit={handleSubmit}>
+        <LabButton type="submit" variant="primary" size="lg" className='w-full max-w-xs rounded-lg'>
           TRANSMIT
         </LabButton>
       </div>

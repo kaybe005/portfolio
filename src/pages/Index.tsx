@@ -16,7 +16,7 @@ const Index = () => {
     // Simulate lab bootup
     const interval = setInterval(() => {
       setBootupProgress(prev => {
-        const next = prev + Math.random() * 15;
+        const next = prev + 3 + Math.random() * 2;
         return next >= 100 ? 100 : next;
       });
     }, 100);
@@ -24,7 +24,7 @@ const Index = () => {
     setTimeout(() => {
       clearInterval(interval);
       setLoading(false);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -55,7 +55,7 @@ const Index = () => {
           <div className="w-full bg-black/50 h-6 rounded-full overflow-hidden border-2 border-dexter-teal mb-4">
             <div 
               className="h-full bg-dexter-green"
-              style={{ width: `${bootupProgress}%`, transition: "width 0.1s" }}
+              style={{ width: `${bootupProgress}%`, transition: "width 0.3s ease-in-out" }}
             ></div>
           </div>
           
@@ -86,12 +86,12 @@ const Index = () => {
         />
         
         {/* Main Content */}
-        <LabPanel className="p-6 mb-8">
+        <LabPanel className="p-6 mb-8 transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(128,0,255,0.3)]">
           {renderSection()}
         </LabPanel>
         
         {/* Footer */}
-        <footer className="text-center text-dexter-gray text-sm">
+        <footer className="text-center text-dexter-gray text-sm px-2 py-4">
           <p>&copy; {new Date().getFullYear()} Kalash's LABORATORY • All experiments logged and monitored.</p>
           <p className='text-xs mt-1'>Unauthorized cloning of lab results may result in spontaneous code mutation.</p>
         </footer>

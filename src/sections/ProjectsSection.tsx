@@ -1,8 +1,9 @@
-
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import LabPanel from '../components/LabPanel';
 import Terminal from '../components/Terminal';
+import useSound from 'use-sound';
+import buttonClick from '../../public/sounds/button-beep.wav';
 
 const ProjectsSection: React.FC = () => {
   const projects = [
@@ -25,7 +26,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Terrain Generator Pro",
       description: "A procedural terrain simulator built with Three.js and GLSL shaders. Lab tests completed, but field deployment is still pending.",
-      imageUrl: "https://placehold.co/600x400/1A0B2E/7FFF00?text=Terrain+Generator+Pro",
+      imageUrl: "./terrain.png" ,
       technologies: ["Three.js", "GLSL", "CSG"],
       demoUrl: "/demo-unavailable",
       codeUrl: "https://github.com/kaybe005/Procedural-Terrain",
@@ -39,6 +40,8 @@ const ProjectsSection: React.FC = () => {
       codeUrl: "https://github.com/kaybe005/TourismProject",
     },
   ];
+
+  const [playClick] = useSound(buttonClick, { volume: 0.5 });
 
   return (
     <div>
@@ -60,6 +63,11 @@ const ProjectsSection: React.FC = () => {
             technologies={project.technologies}
             demoUrl={project.demoUrl}
             codeUrl={project.codeUrl}
+            onClick={() => {
+              playClick();
+              window.open(project.demoUrl, '_blank');
+            }
+            }
           />
         ))}
       </div>

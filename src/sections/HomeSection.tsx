@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Terminal from '../components/Terminal';
 import LabButton from '../components/LabButton';
+import useSound from 'use-sound';
+import buttonClick from '../../public/sounds/button-beep.wav'
 
 const HomeSection: React.FC<{ onSectionChange: (section: string) => void }> = ({ onSectionChange }) => {
   const [displayedName, setDisplayedName] = useState('');
   const fullName = 'KALASH\'S LAB';
   const [nameIndex, setNameIndex] = useState(0);
+  const [playClick] = useSound(buttonClick, { volume: 0.5 });
   
   useEffect(() => {
     if (nameIndex < fullName.length) {
@@ -40,10 +43,15 @@ const HomeSection: React.FC<{ onSectionChange: (section: string) => void }> = ({
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
-        <LabButton onClick={() => onSectionChange('projects')}>
+        <LabButton onClick={() => {
+          playClick();
+          onSectionChange('projects');}}>
           ACCESS LAB FILES
         </LabButton>
-        <LabButton variant="secondary" onClick={() => onSectionChange('contact')}>
+        <LabButton variant="secondary" onClick={() => {
+          playClick();
+          onSectionChange('contact');
+          }}>
           MESSAGE HEAD SCIENTIST
         </LabButton>
       </div>
