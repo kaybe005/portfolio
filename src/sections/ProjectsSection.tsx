@@ -30,7 +30,7 @@ const ProjectsSection: React.FC = () => {
       description: "A procedural terrain simulator built with Three.js and GLSL shaders. Lab tests completed, but field deployment is still pending.",
       imageUrl: "./terrain.png" ,
       technologies: ["Three.js", "GLSL", "CSG"],
-      demoUrl: "/demo-unavailable",
+      demoUrl: "../pages/demo-unavailable",
       codeUrl: "https://github.com/kaybe005/Procedural-Terrain",
     },
     {
@@ -38,7 +38,7 @@ const ProjectsSection: React.FC = () => {
       description: "An MVC tourism management system with agency logins, booking systems, Razor views, and SQL-backed reports.",
       imageUrl: "https://placehold.co/600x400/1A0B2E/44CFCB?text=Tourbot+Navigator",
       technologies: ["ASP.NET", "SQL server", "Bootstrap", "Entity Framework"],
-      demoUrl: "/demo-unavailable",
+      demoUrl: "../pages/demo-unavailable",
       codeUrl: "https://github.com/kaybe005/TourismProject",
     },
   ];
