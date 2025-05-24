@@ -4,6 +4,8 @@ import LabPanel from '../components/LabPanel';
 import Terminal from '../components/Terminal';
 import useSound from 'use-sound';
 import buttonClick from '../../public/sounds/button-beep.wav';
+import { Link } from 'react-router-dom';
+import demoUnavailable from '../pages/demo-unavailable';
 
 const ProjectsSection: React.FC = () => {
   const projects = [
