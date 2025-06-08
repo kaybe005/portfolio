@@ -1,6 +1,6 @@
 # ⚗️ Kalash's Lab — Interactive 2D Developer Portfolio
 
-**Live Demo:** [View 2D portfolio](portfolio-kaybe005s-projects.vercel.app)
+**Live Demo:** [View 2D portfolio](portfolio-five-taupe-18.vercel.app)
 
 Welcome to Kalash's LABORATORY — a fully interactive, animated portfolio themed after a high-tech research lab inspired by Dexter's Laboratory. This 2D portfolio was built to showcase full-stack development skills in a fun, retro-sci-fi interface.
 
